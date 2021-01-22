@@ -1,6 +1,8 @@
 import React from 'react'
+import { LogoProps } from 'types/api'
 import * as S from './styles'
+import { getImageUrl } from "utils/getImageUrl";
 
-const Logo = () => <S.LogoWrapper src="/img/logo.svg" alt="React Avançado" />
+const Logo = ({url, alternativeText}: LogoProps) => <S.LogoWrapper src={getImageUrl(url)} alt={alternativeText} />
 
 export default Logo
