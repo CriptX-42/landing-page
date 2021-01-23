@@ -5,16 +5,12 @@ import Container from 'components/Container'
 
 import * as S from './styles'
 import { SectionAboutProjectProps } from 'types/api'
-import { getImageUrl } from 'utils/getImageUrl'
-
-type Props = {
-  sectionAboutProjectProps: SectionAboutProjectProps,
-}
+import {getImageUrl} from 'utils/getImageUrl'
 
 const SectionAboutProject = ({
   title,
-  description,
-  image
+  image,
+  description
 }: SectionAboutProjectProps) => (
   <S.Wrapper>
     <Container>
@@ -23,15 +19,14 @@ const SectionAboutProject = ({
           src={getImageUrl(image.url)}
           alt={image.alternativeText}
           loading="lazy"
-        ></S.Image>
+        />
         <div>
           <Heading>{title}</Heading>
           <S.Text
             dangerouslySetInnerHTML={{
               __html: description
             }}
-          >
-          </S.Text>
+          ></S.Text>
         </div>
       </S.Container>
     </Container>
