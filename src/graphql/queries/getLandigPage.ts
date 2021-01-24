@@ -6,6 +6,21 @@
      }
    }
 
+   fragment header on LandingPage {
+     header {
+       title
+       description
+       button {
+         label
+         url
+       }
+       image {
+         alternativeText
+         url
+       }
+     }
+   }
+
    fragment sectionAboutProject on LandingPage {
      sectionAboutProject {
        title
@@ -29,17 +44,11 @@
      }
    }
 
-   fragment header on LandingPage {
-     header {
+   fragment sectionConcepts on LandingPage {
+     sectionConcepts {
        title
-       description
-       button {
-         label
-         url
-       }
-       image {
-         alternativeText
-         url
+       concepts {
+         title
        }
      }
    }
@@ -50,6 +59,7 @@
        ...header
        ...sectionAboutProject
        ...sectionTech
+       ...sectionConcepts
      }
    }
  `

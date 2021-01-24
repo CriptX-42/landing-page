@@ -7,7 +7,6 @@ export const Box = styled.section`
     background-color: ${theme.colors.white};
     padding: ${theme.spacings.small};
     border-radius: ${theme.border.radius};
-
     ${media.greaterThan('medium')`
       padding: ${theme.spacings.large};
     `}
@@ -17,12 +16,10 @@ export const Box = styled.section`
 export const List = styled.ul`
   ${({ theme }) => css`
     padding: ${theme.spacings.small} 0 0;
-
     ${media.greaterThan('medium')`
       padding: ${theme.spacings.small} ${theme.spacings.xsmall} 0;
       column-count: 2;
     `}
-
     ${media.greaterThan('large')`
       column-count: 3;
     `}
@@ -34,7 +31,6 @@ export const Item = styled.li`
     position: relative;
     list-style: none;
     padding-left: ${theme.spacings.small};
-
     &::after {
       content: ' ';
       position: absolute;
@@ -45,7 +41,6 @@ export const Item = styled.li`
       border-radius: 100%;
       background: ${theme.colors.secondary};
     }
-
     &:not(:last-child) {
       margin-bottom: ${theme.spacings.xsmall};
     }
