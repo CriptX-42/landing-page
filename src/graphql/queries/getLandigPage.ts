@@ -1,5 +1,4 @@
 const GET_LANDING_PAGE = /* GraphQL */ `
-
   fragment logo on LandingPage {
     logo {
       alternativeText
@@ -94,7 +93,19 @@ const GET_LANDING_PAGE = /* GraphQL */ `
         description
       }
     }
+  }
 
+  fragment sectionReview on LandingPage {
+    sectionReviews {
+      title
+      reviews {
+        name
+        text
+        photo {
+          url
+        }
+      }
+    }
   }
 
   query GET_LANDING_PAGE {
@@ -108,9 +119,9 @@ const GET_LANDING_PAGE = /* GraphQL */ `
       ...sectionAgenda
       ...pricingBox
       ...sectionAboutUs
+      ...sectionReview
     }
   }
-
 `
 
 export default GET_LANDING_PAGE
