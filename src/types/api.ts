@@ -1,3 +1,10 @@
+export type TechIcon = {
+  title: string
+  icon: {
+    url: string
+  }
+}
+
 export type LogoProps = {
   alternativeText: 'React Avançado'
   url: '/uploads/logo_74e2fdc755.svg'
@@ -23,9 +30,15 @@ export type SectionAboutProjectProps = {
   }
 }
 
+export type sectionTechProps = {
+  title: string
+  techIcons: TechIcon[]
+}
+
 
 export type LandingPageProps = {
   logo: LogoProps
   header: HeaderProps
   sectionAboutProject: SectionAboutProjectProps
+  sectionTech: sectionTechProps
 }

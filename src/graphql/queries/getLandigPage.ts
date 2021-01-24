@@ -19,13 +19,13 @@
 
    fragment sectionTech on LandingPage {
      sectionTech {
-      title
-      techIcons {
-        title
-        icon {
-          url
-        }
-      }
+       title
+       techIcons {
+         title
+         icon {
+           url
+         }
+       }
      }
    }
 
